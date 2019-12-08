@@ -13,4 +13,19 @@ defmodule AocTest do
       assert is_number(total_fuel_per_module_mass)
     end
   end
+
+  describe "day two" do
+    test "calculate day two first task" do
+      result = Aoc.solve_day_two_first_task()
+      solution = result.program[0]
+      assert is_number(solution)
+    end
+
+    test "calculate day two second task" do
+      {noun, verb} = Aoc.solve_day_two_second_task()
+      solution = 100 * noun + verb
+      IO.inspect(solution, label: "SOLUTION")
+      assert is_number(solution)
+    end
+  end
 end
